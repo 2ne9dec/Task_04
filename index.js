@@ -11,7 +11,6 @@ for (let i = 0; i < toDoList.length; i++) {
     li.append(toDoList[i]);
     ul.append(li);
 };
-console.dir(ul)
 
 const resultAdd = () => {
     const li = document.createElement('li');
@@ -21,7 +20,11 @@ const resultAdd = () => {
 };
 add.addEventListener('click', resultAdd);
 
-
-for (let list of toDoList) {
-    
-}
+// let removeList = () => {
+//     for (let list of toDoList) {
+//         if () {
+//             list.splice();
+//         }
+//     }
+// };
+// remove.addEventListener('click', removeList);
