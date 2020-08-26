@@ -15,6 +15,7 @@ let resultAdd = () => {
     const li = document.createElement('li');
     li.textContent = input.value;
     ul.append(li);
+    toDoList.push(li.textContent)
 };
 
 add.addEventListener('click', resultAdd);
