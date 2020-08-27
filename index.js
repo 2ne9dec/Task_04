@@ -22,3 +22,9 @@ const addTask = () => {
     li.append(button);
 };
     add.addEventListener('click', addTask);
+
+    const button = document.querySelectorAll('button')
+    console.log(button);
+    for (let list of toDoList) {
+        
+    }
