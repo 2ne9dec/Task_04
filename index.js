@@ -22,14 +22,3 @@ const addTask = () => {
     li.append(button);
 };
     add.addEventListener('click', addTask);
-
-const deleteTask = () => {
-    for (let list of toDoList) {
-    toDoList.splice(list, 1);
-    }
-};
-const button = document.querySelectorAll('button');
-
-    for (let but of button) {
-        but.addEventListener('click', deleteTask);
-    };
