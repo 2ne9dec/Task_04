@@ -1,4 +1,4 @@
-button {
-    margin-left: 10px;
-    margin-bottom: 5px;
+div {
+    display: inline-block;
+    width: 50px;
 }
