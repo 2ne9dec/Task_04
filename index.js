@@ -1,4 +1,4 @@
-let toDoList = ['Task1', 'Task2', 'Task3'];
+let toDoList = [];
 const input = document.querySelector('.input');
 const add = document.querySelector('#add');
 const ul = document.querySelector('#ul');
