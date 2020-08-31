@@ -1,4 +1,5 @@
 const toDoList = [];
+
 const input = document.querySelector('.input');
 const add = document.querySelector('#add');
 const ul = document.querySelector('#ul');
@@ -13,15 +14,14 @@ const render = () => {
         button.innerHTML = 'Delete';
         li.append(button);
         ul.append(li);
-
-        button.addEventListener('click', () => {
-            toDoList.splice(i, 1);
-            ul.innerHTML = null;
-            localStorage.setItem('list', JSON.stringify(toDoList));
-            render();
-        });
+            button.addEventListener('click', () => {
+                toDoList.splice(i, 1);
+                ul.innerHTML = null;
+                localStorage.setItem('list', JSON.stringify(toDoList));
+                render();
+            });
+        };
     };
-};
 render();
 
     add.addEventListener('click', () => {
@@ -36,7 +36,7 @@ render();
 
 const data = () => {
     if (localStorage.length !== 0 && localStorage.length !== undefined) {
-        toDoList.push(JSON.parse(localStorage.getItem('list')));
+            toDoList.push(JSON.parse(localStorage.getItem('list')));
         render();
     }
 };
