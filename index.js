@@ -38,6 +38,6 @@ const data = () => {
     if (localStorage.length !== 0 && localStorage.length !== undefined) {
         toDoList.push(JSON.parse(localStorage.getItem('list')));
         render();
-    };
+    }
 };
 data();
