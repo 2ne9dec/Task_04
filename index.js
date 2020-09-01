@@ -17,7 +17,7 @@ const render = () => {
             button.addEventListener('click', () => {
                 toDoList.splice(i, 1);
                 ul.innerHTML = null;
-                localStorage.setItem('list', JSON.stringify(toDoList));
+                localStorage.setItem('toDoList', JSON.stringify(toDoList));
                 render();
             });
         };
@@ -27,7 +27,7 @@ render();
     add.addEventListener('click', () => {
         toDoList.push(input.value);
         ul.innerHTML = null;
-        localStorage.setItem('list', JSON.stringify(toDoList));
+        localStorage.setItem('toDoList', JSON.stringify(toDoList));
         render();
         input.value = null;
     });
@@ -35,9 +35,12 @@ render();
     // localStorage.clear();
 
 const data = () => {
-    if (localStorage.length !== 0 && localStorage.length !== undefined) {
-            toDoList.push(JSON.parse(localStorage.getItem('list')));
+    if (localStorage.length) {
+        const results = JSON.parse(localStorage.getItem('toDoList'));
+        for (let result of results) {
+            toDoList.push(result);
+        }
         render();
-    }
-};
+        }
+    };
 data();
